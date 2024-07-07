@@ -1,0 +1,395 @@
+main{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+:root{
+    --background: #080515;
+    --accent: #D0A539;
+    --primarybtn: #CFE387;
+    --textcolor:#fff;
+    --main-title: 40px;
+    --subtitle: 36px;
+    --subsectitle: 28px;
+    --text: 18px;
+    --title-banner: 60px;
+    --text-banner: 22px;
+    --title-card: 22px;
+    --text-card: 14px;
+}
+@media (max-width:1050px) {
+    :root{
+        --main-title: 36px;
+        --subtitle: 32px;
+        --subsectitle: 26px;
+        --text: 16px;
+        --title-banner: 40px;
+        --text-banner: 18px;
+    }
+}
+@media (max-width:520px) {
+    :root{
+        --main-title: 28px;
+        --subtitle: 24px;
+        --subsectitle: 22px;
+        --text: 14px;
+        --title-banner: 32px;
+        --text-banner: 16px;
+    }
+}
+
+.about-me{
+    max-width: 1700px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+}
+.ab-img{
+    max-width: 800px;
+    height: 550px;
+}
+.ab-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+}
+.about-me .info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    padding: 0 1em;
+    width: 55%;
+}
+.about-me h1{
+    font-size: var(--main-title);
+    color: var(--accent);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+.about-me h1 i{
+    color: var(--textcolor);
+}
+.about-me h2{
+    color: var(--textcolor);
+    font-size: var(--subtitle);
+    font-weight: 600;
+}
+.about-me p{
+    font-size: var(--text);
+    color: var(--textcolor);
+    font-weight: 500;
+}
+.about-me a{
+    background-color: var(--primarybtn);
+    color: black;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(var(--text-banner) - 2px);
+    font-weight: 600;
+    width: 220px;
+    height: 50px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(222, 244, 214, 0.49);
+}
+.about-me a:hover{
+    background-color:black;
+    color: var(--textcolor);
+    transition: .5s all ease;
+}
+@media (max-width:1700px) {
+    .about-me{
+        max-width: 1400px;
+    }
+}
+@media (max-width:1400px) {
+    .about-me{
+        max-width: 90%;
+        gap: 1em;
+    }
+    .about-me h1{
+        gap: .5em;
+    }
+    .ab-img{
+        max-width: 550px;
+        height: 450px;
+    }
+    .about-me .info{
+        width: 55%;
+    }
+}
+@media (max-width:1050px) {
+    .about-me{
+        flex-direction: column;
+        align-items: center;
+        padding: 2em 0;
+    }
+    .ab-img{
+        width: 100%;
+        max-width: unset;
+    }
+    .ab-img img{
+        border-radius: 10px;
+    }
+    .about-me .info{
+        width: 100%;
+        padding: 0 2em;
+    }
+    .about-me a{
+        margin: auto;
+    }
+}
+@media (max-width:520px) {
+    .about-me{
+        max-width: 100%;
+    }
+    .about-me .info{
+        padding: 0 1em;
+    }
+}
+.skills{
+    max-width: 1400px;
+    width: 100%;
+    display: grid;
+    gap: 1em;
+}
+.skills .intro{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.skills .intro >div:first-child{
+    position: relative;
+}
+.skills .intro h2{
+    font-size: var(--subtitle);
+    font-weight: 700;
+    color: var(--textcolor);
+}
+.skill-cont{
+    width: 100%;
+    display: flex !important;
+    flex-direction: column;
+}
+.skill-cont > div{
+    display: flex;
+}
+.skill-cont > div .card{
+    display: grid;
+    padding: 1em 0;
+    gap: 1em;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+}
+.skill-cont >div .card i{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    font-size: 120px;
+}
+.soft-skills >div .card i{
+    color: var(--accent);
+}
+.hard-skills >div .card i{
+    color: var(--primarybtn);
+}
+
+.skill-cont >div .card span{
+    font-size: calc(var(--subsectitle) - 2px);
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    color: var(--textcolor);
+    transition: .4s ease-in;
+}
+.soft-skills >div .card a:last-child:hover{
+    color:var(--accent);
+}
+.hard-skills >div .card a:last-child:hover{
+    color:var(--primarybtn);
+}
+.soft-skills .swiper-button-prev, .soft-skills .swiper-button-next{
+    display: none;
+}
+.soft-skills .swiper-button-prev, .soft-skills .swiper-button-next{
+    color: var(--accent) !important;
+}
+.hard-skills .swiper-button-prev, .hard-skills .swiper-button-next{
+    color: var(--primarybtn) !important;
+}
+.skill-cont .swiper-button-next:after, .skill-cont .swiper-button-prev:after{
+    font-weight: bold !important;
+}
+.skill-cont .swiper-pagination .swiper-pagination-bullet{
+    background-color: var(--accent) !important;
+}
+.soft-skills .swiper-pagination .swiper-pagination-bullet-active{
+    background-color: var(--accent) !important;
+}
+.hard-skills .swiper-pagination .swiper-pagination-bullet-active{
+    background-color: var(--primarybtn) !important;
+}
+.skill-cont .swiper-pagination span{
+    width: 12px;
+    height: 12px;
+}
+.skill-cont .swiper-pagination{
+    display: block;
+    justify-content: center;
+    bottom: 0;
+}
+@media (max-width:1400px) {
+    .skills{
+        max-width: 1050px;
+    }
+    .skills .intro >div:last-child{
+        width: 60%;
+    }
+    .skill-cont >div .card i{
+        font-size: 100px;
+    }
+}
+@media (max-width:1050px){
+    .skills{
+        max-width: 90%;
+    }
+    .skills .intro{
+        flex-direction: column;
+        gap: 1em;
+    }
+    .skills .intro >div:first-child,.skills .intro >div:last-child{
+        width: 100%;
+    }
+    .skill-cont{
+        gap: 1em;
+    }
+    .skill-cont > div{
+        gap: 0;
+    }
+    .skill-cont >div .card i{
+        font-size: 80px;
+    }
+    .skill-cont .swiper-wrapper{
+        justify-content: flex-start;
+    }
+}
+@media (max-width:750px){
+    .soft-skills .swiper-button-prev, .soft-skills .swiper-button-next{
+        display: block;
+    }
+    .hard-skills .swiper-button-prev, .hard-skills .swiper-button-next{
+        display: none;
+    }
+}
+@media (max-width:520px){
+    .skills .intro >div:last-child p{
+        text-align: justify;
+    }
+}
+
+
+.contact{
+    max-width: 1700px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    padding: 4em 0;
+}
+.contact >div:first-child{
+    display: grid;
+    gap: 1em;
+}
+.contact >div h2{
+    color: var(--textcolor);
+    font-size: var(--subtitle);
+    font-weight: bold;
+}
+.contact >div p{
+    color: var(--textcolor);
+    font-size: var(--text);
+    font-weight: 500;
+}
+.contact >div:last-child{
+    display: grid;
+    width: 40%;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3em 1em;
+}
+.contact >div a{
+    font-size: var(--title-banner);
+    text-decoration: none;
+    color: var(--accent);
+    display: grid;
+    justify-content: center;
+}
+.contact >div a:hover{
+    color: var(--textcolor);
+    transition: .5s all ease;
+}
+.contact >div a i{
+    margin: auto;
+}
+.contact >div a span{
+    font-size: var(--subsectitle);
+    color: var(--textcolor);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+@media (max-width:1700px) {
+    .contact{
+        max-width: 1400px;
+    }
+    .contact >div:last-child{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2em 0;
+    }
+}
+
+@media (max-width:1400px) {
+    .contact{
+        max-width: 90%;
+    }
+    .contact >div:last-child{
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+}
+@media (max-width:1050px) {
+    .contact{
+        flex-direction: column;
+        gap: 2em;
+        padding: 3em 0;
+    }
+    .contact >div:last-child{
+        width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+    }
+}
+@media (max-width:590px) {
+    .contact >div:last-child{
+        width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    }
+}
+@media (max-width:520px) {
+    .contact{
+        max-width: 100%;
+    }
+    .contact >div{
+        width: 90%;
+        text-align: center;
+    }
+}
